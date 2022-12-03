@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+/*
+@import "assets/resources/styles/inde.css";
+@import "~materialize-css/dist/css/materialize.css";
+@import "~material-icons/iconfont/material-icons.css";
+*/
+
+.my-logo{
+  height: 64px;
+}
+
+/*
+fixa o rodapé
+*/
+
+:host {
+  display: flex;
+  min-height: 100hv;
+  flex-direction: column;
+}
+
+main{
+  flex: 1 0 auto;
+  padding: 0px !important;
+}

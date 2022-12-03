@@ -1,0 +1,41 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header{
+  width:100%;
+  background-color: mediumvioletred;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo-imagem{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.container-logo{
+  display: flex;
+  align-items: center;
+}
+
+.logo-texto{
+  margin-left: 20px;
+}
+
+.cabecalho li{
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.cabecalho li a{
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}

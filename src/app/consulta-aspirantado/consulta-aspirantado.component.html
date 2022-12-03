@@ -1,0 +1,56 @@
+<div>
+  <div>
+    <div class="form">
+      <header class="header">
+        <h2>CONSULTA POR DATA DE ASPIRANTADO</h2>
+      </header>
+
+      <form [formGroup]="forBuscaAsp" class="cons" (ngSubmit)="consultar()">
+        <div>Data de aspirantado</div><br><br>
+
+        <label for="data">Inicio</label>
+        <input name="dateInicio" type="date" class="input" id="data" formControlName="dateInicio" required>
+        <div *ngIf="forBuscaAsp.get('dateInicio')?.hasError('required') && forBuscaAsp.get('dateInicio')?.touched"
+          class="red-text">
+          Data obrigatoria.
+        </div>
+
+        <label for="data">Fim</label>
+        <input name="dateFim" type="date" class="input" id="data" formControlName="dateFim" required>
+        <div *ngIf="forBuscaAsp.get('dateFim')?.hasError('required') && forBuscaAsp.get('dateFim')?.touched"
+          class="red-text">
+          Data obrigatoria.
+        </div>
+        <div class="cons">
+          <div class="botao">
+            <button type="submit">CONSULTAR</button>
+          </div>
+          <div class="botao">
+            <button routerLink="/consulta">VOLTAR</button>
+          </div>
+        </div>
+      </form>
+
+
+
+    </div>
+
+    <div *ngIf="results.length > 0" class="consulta-tabela">
+      <table>
+        <thead>
+          <th *ngFor="let coluna of colunas">
+            {{coluna}}
+          </th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let efetivo of results">
+            <td *ngFor="let chave of colunas">
+              {{efetivo[chave]}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>

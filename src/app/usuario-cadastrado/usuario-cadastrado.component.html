@@ -1,0 +1,50 @@
+<section class="container login">
+  <header class="header">
+    <h2>Cadastrar</h2>
+  </header>
+
+  <form [formGroup]="forCadastrodeUsuario" (ngSubmit)="onSubmit()">
+    <div class="input-field">
+      <label for="nome">Nome *</label>
+      <span class="helper-text" data-error="wrong" data-success="right"></span>
+      <input id="name" type="text" name="name" class="validate" placeholder="Digite o nome" formControlName="name"
+        autocomplete="off" required />
+      <div *ngIf="forCadastrodeUsuario.get('name')?.hasError('required') &&
+       forCadastrodeUsuario.get('name')?.touched" class="red-text">
+        Por favor, informe o seu nome.
+      </div>
+    </div>
+    <div class="input-field">
+      <label for="nome">Email *</label>
+      <span class="helper-text" data-error="wrong" data-success="right"></span>
+      <input id="email" type="email" name="email" class="validate" placeholder="Digite o email" formControlName="email"
+        autocomplete="off" required />
+      <div *ngIf="forCadastrodeUsuario.get('email')?.hasError('required') &&
+       forCadastrodeUsuario.get('email')?.touched" class="red-text">
+        Por favor, informe o seu Email.
+      </div>
+    </div>
+
+    <div class="input-field">
+      <label for="senha">Senha *</label>
+      <input id="senha" type="password" name="senha" class="validate" placeholder="Digite a senha"
+        formControlName="password" autocomplete="off" required />
+      <div *ngIf="forCadastrodeUsuario.get('password')?.hasError('required') &&
+       forCadastrodeUsuario.get('password')?.touched" class="red-text">
+        Por favor, informe sua senha.
+      </div>
+      <div *ngIf="forCadastrodeUsuario.get('password')?.hasError('minlength')" class="red-text">
+        No minimo 6 car.
+      </div>
+      <div *ngIf="forCadastrodeUsuario.get('password')?.hasError('pattern')" class="red-text">
+        Pelo menos um maiusculo, um car especial e número.
+      </div>
+
+    </div>
+
+    <div class="acoes">
+      <button class="botao" type="submit" name="action" [disabled]="forCadastrodeUsuario.invalid">Cadastro</button>
+      <button routerLink="/login" class="botao">Cancelar</button>
+    </div>
+  </form>
+</section>

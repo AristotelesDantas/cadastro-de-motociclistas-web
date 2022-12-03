@@ -1,0 +1,62 @@
+<section class="container cadastro">
+  <header class="header">
+    <h2>CADASTRO DE EFETIVO</h2>
+  </header>
+  <form [formGroup]="forCadastro" (ngSubmit)="onSubmit()">
+    <div class="input-field">
+      <label for="nome">Nome de batismo</label>
+      <span class="helper-text" data-error="wrong" data-success="right"></span>
+      <input name="nomeBatismo" type="text" class="input" id="cadastro" formControlName="nameBatismo"
+        placeholder="Digite o nome" required>
+      <div *ngIf="forCadastro.get('nameBatismo')?.hasError('required') && forCadastro.get('nameBatismo')?.touched"
+        class="red-text">
+        Por favor, informe o seu nome.
+      </div>
+      <div *ngIf="forCadastro.get('nameBatismo')?.hasError('pattern') && forCadastro.get('nameBatismo')?.touched"
+        class="red-text">
+        Tem que começar com maiscula.
+      </div>
+      <label for="nomeReal">Nome Real</label>
+      <span class="helper-text" data-error="wrong" data-success="right"></span>
+      <input name="nomeReal" type="text" class="input" id="nomeReal" placeholder="Digite o nome"
+        formControlName="nameReal" required>
+      <div *ngIf="forCadastro.get('nameReal')?.hasError('required') && forCadastro.get('nameReal')?.touched"
+        class="red-text">
+        Por favor, informe o seu nome.
+      </div>
+      <div *ngIf="forCadastro.get('nameReal')?.hasError('pattern') && forCadastro.get('nameReal')?.touched"
+        class="red-text">
+        Tem que começar com maiscula.
+      </div>
+
+      <label for="dataAsp">Data de Aspirantado</label>
+      <input name="dataAsp" type="date" class="input" id="dataAsp" formControlName="dateAsp" required>
+      <div *ngIf="forCadastro.get('dateAsp')?.hasError('required') && forCadastro.get('dateAsp')?.touched"
+        class="red-text">
+        Data obrigatoria.
+      </div>
+
+      <label for="fechamento">Fechamento de Colete</label>
+      <input name="fechamento" type="date" class="input" id="fechamento" formControlName="dateFechamento">
+      <div>
+        <select name="veiculo_id" id="veicul" formControlName="veiculo_id">
+
+            <option [value]="veiculo.id"  *ngFor="let veiculo of veiculos">
+              {{veiculo.placa}}
+            </option>
+
+
+        </select>
+      </div>
+      <div class="irVeiculo">
+        <button routerLink="/veiculos" class="botao1"></button>
+        <p>Veículo</p>
+      </div>
+    </div>
+
+    <div class="acoes">
+      <button type="submit" name="action" [disabled]="forCadastro.invalid" class="botao">Cadastrar</button>
+      <button routerLink="/inicio" class="botao">Voltar</button>
+    </div>
+  </form>
+</section>

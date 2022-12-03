@@ -1,0 +1,38 @@
+<div class="consulta-nome">
+  <div class="container">
+    <div class="container form">
+      <header class="header">
+        <h2>CONSULTA POR NOME</h2>
+      </header>
+
+      <div class="cons">
+        <label for="nome">Nome de batismo</label>
+        <input type="text" class="input" id="nome" placeholder="Digite o nome" [formControl]="forConsulta">
+      </div>
+
+      <div class="cons">
+        <button class="botao1" [disabled]="forConsulta.invalid" type="button" (click)="consultar()">CONSULTAR
+        </button>
+        <button routerLink="/consulta" class="botao1">VOLTAR</button>
+      </div>
+
+    </div>
+    <div *ngIf="results.length > 0" class="consulta-tabela">
+      <table>
+        <thead>
+          <th *ngFor="let coluna of colunas">
+            {{coluna}}
+          </th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of results">
+            <td *ngFor="let chave of colunas">
+              {{user[chave]}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>

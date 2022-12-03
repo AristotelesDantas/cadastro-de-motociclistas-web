@@ -1,0 +1,62 @@
+
+<section class="container login">
+  <header class="header">
+      <h2>LOGIN</h2>
+  </header>
+
+  <form [formGroup]="forLogin" (ngSubmit)="onSubmit()">
+    <div class="input-field">
+     <label for="nome">Nome *</label>
+     <span class="helper-text" data-error="wrong" data-success="right"></span>
+      <input
+        id="name"
+        type="text"
+        name="name"
+        class="validate"
+        placeholder="Digite o nome"
+        formControlName="name"
+        autocomplete="off"
+        required
+      />
+      <div *ngIf="forLogin.get('name')?.hasError('required') &&
+       forLogin.get('name')?.touched" class="red-text" >
+        Por favor, informe o seu nome.
+      </div>
+    </div>
+
+    <div class="input-field">
+     <label for="senha">Senha *</label>
+      <input
+      id="senha"
+       type="password"
+       name="senha"
+       class="validate"
+       placeholder="Digite a senha"
+       formControlName="password"
+       autocomplete="off"
+       required
+      />
+      <div *ngIf="forLogin.get('password')?.hasError('required') &&
+       forLogin.get('password')?.touched" class="red-text" >
+        Por favor, informe sua senha.
+      </div>
+      <div *ngIf="forLogin.get('password')?.hasError('minlength')" class="red-text" >
+        No minimo 6 car.
+      </div>
+      <div *ngIf="forLogin.get('password')?.hasError('pattern')" class="red-text" >
+        Pelo menos um maiusculo, um car especial e número.
+      </div>
+
+    </div>
+
+      <div class="acoes">
+        <button class="botao"
+        type="submit"
+        name="action"
+        [disabled]="forLogin.invalid"
+        >Login</button>
+        <button class="botao">Cancelar</button>
+        <button Class="botao" routerLink="/usuario-cadastrado">Cadastrar</button>
+      </div>
+  </form>
+</section>

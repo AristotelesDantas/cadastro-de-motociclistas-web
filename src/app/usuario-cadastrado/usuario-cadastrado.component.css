@@ -1,0 +1,60 @@
+.header {
+  text-align: center;
+  }
+
+  .input-field {
+    text-align: center;
+    display: grid;
+    margin-bottom: 10px;
+  }
+
+.acoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.botao {
+  margin: 5px;
+  margin-top: 70px;
+  width: 200px;
+}
+
+.botao:disabled{
+  opacity: 0.5;
+}
+
+.login {
+  padding: 2rem 0;
+}
+
+.login form {
+  position: relative;
+  display: block;
+  background: #ccd4d9;
+  margin-left: 30%;
+  margin-right: 30%;
+  }
+
+.login form label {
+  color: #1b4472;
+  font-weight: bold;
+  margin: 0 0 1rem;
+}
+
+.login form .input {
+  border: none;
+  height: 40px;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  margin: 0.5rem 0 2rem;
+}
+
+
+.login form .textarea {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  margin: 0.5rem 0 2rem;
+}

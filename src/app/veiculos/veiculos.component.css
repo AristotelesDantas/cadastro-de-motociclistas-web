@@ -1,0 +1,67 @@
+
+.header {
+  text-align: center;
+  }
+
+  .acoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .botao {
+    margin: 5px;
+    margin-top: 70px;
+    width: 200px;
+  }
+
+  .veiculo {
+    padding: 2rem 0;
+  }
+
+  form {
+    position: relative;
+    border: none;
+    border-radius: 20px;
+    display: block;
+    flex-direction: column;
+    padding: 2rem;
+    margin-left: 40%;
+    margin-right: 35%;
+    background: #C4EDFF;
+  }
+
+  select {
+    width: 230px;
+  }
+
+  .veiculo form label {
+    color: #154580;
+    font-weight: bold;
+    margin: 0 0 1rem;
+    text-align: center;
+  }
+
+  .veiculo form .input {
+    border: none;
+    height: 10px;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    margin: 0.5rem 0 2rem;
+  }
+
+  .veiculo form .textarea {
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    margin: 0.5rem 0 2rem;
+  }
+
+   .botao1 {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+  }

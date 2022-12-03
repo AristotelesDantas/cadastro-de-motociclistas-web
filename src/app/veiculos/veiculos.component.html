@@ -1,0 +1,83 @@
+
+<section class="container veiculo">
+  <header class="header">
+    <h2>CADASTRO DE VEÍCULO</h2>
+  </header>
+  <form [formGroup]="forVeiculo" (ngSubmit)="onSubmit()">
+    <label for="veiculo" >Tipo de Veículo</label>
+     <select name="veic" formControlName="veic" required>
+      <option>Carro</option>
+      <option>Moto</option>
+     </select>
+     <div *ngIf="forVeiculo.get('veic')?.hasError('required') && forVeiculo.get('veic')?.touched" class="red-text" >
+      Por favor, informe o veiculo.
+    </div>
+    <label for="marca" >Marca</label>
+     <input
+     type="text"
+     name="marca"
+     class="input"
+     id="marca"
+     placeholder="Digite a marca"
+     formControlName="marca"
+     required
+     >
+     <div *ngIf="forVeiculo.get('marca')?.hasError('required') && forVeiculo.get('marca')?.touched" class="red-text" >
+      Por favor, informe a marca.
+    </div>
+    <label for="modelo" >Modelo</label>
+     <input
+     type="text"
+     name="modelo"
+     class="input"
+     id="modelo"
+     placeholder="Digite o modelo"
+     formControlName="modelo"
+     required
+     >
+     <div *ngIf="forVeiculo.get('modelo')?.hasError('required') && forVeiculo.get('modelo')?.touched" class="red-text" >
+      Por favor, informe o modelo.
+    </div>
+    <label for="placa" >Placa</label>
+     <input
+     type="text"
+     name="placa"
+     class="input"
+     id="placa"
+     placeholder="Digite a placa"
+     formControlName="placa"
+     required
+          >
+          <div *ngIf="forVeiculo.get('placa')?.hasError('required') && forVeiculo.get('placa')?.touched" class="red-text" >
+            Por favor, informe a placa.
+          </div>
+    <label for="emplacamento" >Emplacamento</label>
+     <input
+     type="date"
+     name="emplacamento"
+     class="input"
+     id="emplacamento"
+     formControlName="date"
+     required
+     >
+     <div *ngIf="forVeiculo.get('date')?.hasError('required') && forVeiculo.get('date')?.touched" class="red-text" >
+      Por favor, informe o emplacamento.
+    </div>
+    <label for="combustivel" >Tipo de combustivel</label>
+    <select name="comb" formControlName="comb" required>
+      <option>Gasolina</option>
+      <option>Etanol</option>
+      <option>Diesel</option>
+      <option></option>
+     </select>
+     <div *ngIf="forVeiculo.get('comb')?.hasError('required') && forVeiculo.get('comb')?.touched" class="red-text" >
+      Por favor, informe o veiculo.
+    </div>
+     <div class="acoes">
+      <button type="submit" class="botao" [disabled]="forVeiculo.invalid" >Cadastrar</button>
+      <button routerLink="/efetivo" class="botao">Voltar</button>
+    </div>
+
+  </form>
+
+  </section>

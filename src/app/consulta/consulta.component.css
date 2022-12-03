@@ -1,0 +1,20 @@
+.header {
+  text-align: center;
+}
+
+
+.cons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+}
+
+.botao1 {
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+}

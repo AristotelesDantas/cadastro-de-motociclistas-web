@@ -1,0 +1,84 @@
+header {
+text-align: center;
+}
+
+.acoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.botao {
+  margin: 5px;
+  margin-top: 70px;
+  width: 100px;
+}
+
+.cadastro {
+  padding: 2rem 0;
+}
+
+form {
+  position: relative;
+  border: none;
+  border-radius: 20px;
+  display: block;
+  flex-direction: column;
+  padding: 2rem;
+  margin-left: 40%;
+  margin-right: 35%;
+  background: #C4EDFF;
+}
+
+.input-field {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.cadastro form label {
+  color: #154580;
+  font-weight: bold;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+.cadastro form .input {
+  border: none;
+  height: 10px;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  margin: 0.5rem 0 2rem;
+}
+
+
+.cadastro form .textarea {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  margin: 0.5rem 0 2rem;
+}
+
+.irVeiculo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.botao1 {
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (max-width: 910px) {
+  .container {
+    width: 100%;
+  }
+
+}

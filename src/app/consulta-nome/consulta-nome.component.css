@@ -1,0 +1,25 @@
+header {
+  text-align: center;
+}
+
+.cons {
+  text-align: center;
+}
+
+.cons .botao1 {
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: 30px;
+  width: 100px;
+  height: 25px;
+}
+
+.consulta-tabela table,
+th,
+td {
+  border: 1px solid rgb(218, 187, 187);
+  border-collapse: collapse;
+  background-color: rgb(146, 144, 144);
+  margin-left: auto;
+  margin-right: auto;
+}

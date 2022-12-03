@@ -1,0 +1,96 @@
+footer {
+  background-color: mediumvioletred;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "footer-content my-logo .";
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.container-logo{
+  display: flex;
+  align-items: center;
+}
+
+.footer-content {
+  justify-self: center;
+  grid-area: footer-content;
+}
+
+.my-logo {
+  justify-self: center;
+  grid-area: my-logo;
+}
+
+footer small {
+  color: rgb(27, 3, 3);
+}
+
+
+@media (max-width: 576px) {
+  .cabecalho .logo {
+    padding: 2rem;
+  }
+
+  .cabecalho p {
+    font-size: 1.5rem
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/*
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+footer{
+  position: absolute;
+  bottom: 0;
+  background: red;
+  height: auto;
+  width: 100vw;
+  font-family: "Open Sans";
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-content{
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content p{
+max-width: 500px;
+margin: 10px auto;
+line-height: 28px;
+font-size: 14px;
+}
+
+.my-logo{
+
+}
+*/

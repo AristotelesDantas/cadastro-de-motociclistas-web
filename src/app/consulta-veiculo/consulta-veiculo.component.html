@@ -1,0 +1,55 @@
+<div>
+  <div class="container">
+    <div class="form">
+
+      <header class="header">
+        <h2>CONSULTA POR VEÍCULO</h2>
+      </header>
+
+      <div class="cons">
+      <div class="placa">
+       <label for="placa">Digite a placa</label>
+          <input
+            type="text"
+            class="input"
+            id="placa"
+            placeholder="Digite a placa"
+            [formControl]="forConsPlaca"
+          >
+        </div>
+      </div>
+
+      <div class="cons">
+        <div class="botao">
+          <button
+          class="botao1"
+          [disabled]="forConsPlaca.invalid"
+          type="button"
+          (click)="consultar()">CONSULTAR</button>
+        </div>
+
+        <div class="botao">
+          <button routerLink="/consulta" class="botao1">VOLTAR</button>
+        </div>
+      </div>
+
+    </div>
+    <div *ngIf="results.length > 0" class="consulta-tabela">
+      <table>
+        <thead>
+          <th *ngFor="let coluna of colunas">
+            {{coluna}}
+          </th>
+
+        </thead>
+        <tbody>
+          <tr *ngFor="let veiculo of results">
+            <td *ngFor="let chave of colunas">
+              {{veiculo[chave]}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+  </div>
+</div>
